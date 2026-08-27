@@ -1,0 +1,25 @@
+args:
+- name: num1
+- name: num2
+commonfields:
+  id: 'multiply'
+  version: -1
+dockerimage: demisto/python3:3.12.13.10404775
+enabled: true
+engineinfo: {}
+mainengineinfo: {}
+name: multiply
+outputs:
+- contextPath: debug
+  type: string
+pswd: ""
+restrictioncenter: {}
+runas: DBotWeakRole
+runonce: false
+script: ''
+scripttarget: 0
+signature: ""
+subtype: python3
+tags: []
+type: python
+fromversion: 6.0.0

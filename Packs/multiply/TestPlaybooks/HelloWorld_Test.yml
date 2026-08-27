@@ -6,10 +6,10 @@ starttaskid: "0"
 tasks:
   "0":
     id: "0"
-    taskid: 16678589-7030-4738-8390-0b7dd84c2d74
+    taskid: b3b65914-7be4-45f8-8e54-dc5d5e9b125f
     type: start
     task:
-      id: 16678589-7030-4738-8390-0b7dd84c2d74
+      id: b3b65914-7be4-45f8-8e54-dc5d5e9b125f
       version: -1
       name: ""
       iscommand: false
@@ -35,10 +35,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "1":
     id: "1"
-    taskid: e3249b63-41f0-4099-886f-ac634c9fc7c6
+    taskid: df35e8ef-2e55-4775-8df0-58265bff17c9
     type: regular
     task:
-      id: e3249b63-41f0-4099-886f-ac634c9fc7c6
+      id: df35e8ef-2e55-4775-8df0-58265bff17c9
       version: -1
       name: DeleteContext
       script: DeleteContext
@@ -47,7 +47,7 @@ tasks:
       brand: ""
     nexttasks:
       '#none#':
-      - "2"
+      - "3"
     scriptarguments:
       all:
         simple: "yes"
@@ -69,10 +69,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "2":
     id: "2"
-    taskid: 502c4619-ad80-45b9-89bd-bb8334511625
+    taskid: 0a9393eb-5a26-43df-8230-f679f65f49c9
     type: regular
     task:
-      id: 502c4619-ad80-45b9-89bd-bb8334511625
+      id: 0a9393eb-5a26-43df-8230-f679f65f49c9
       version: -1
       name: Helloworld
       description: Hello command - prints hello to anyone.
@@ -106,32 +106,27 @@ tasks:
     isautoswitchedtoquietmode: false
   "3":
     id: "3"
-    taskid: 6886b4e8-7838-4bf3-8246-27bc1f2fbbe5
+    taskid: bc6dab68-28f6-4a1e-ad07-d7f55fa77aa3
     type: condition
     task:
-      id: 6886b4e8-7838-4bf3-8246-27bc1f2fbbe5
+      id: bc6dab68-28f6-4a1e-ad07-d7f55fa77aa3
       version: -1
       name: Verify Outputs
       type: condition
       iscommand: false
       brand: ""
     nexttasks:
-      '#default#':
-      - "6"
       "yes":
       - "5"
     separatecontext: false
     conditions:
     - label: "yes"
       condition:
-      - - operator: isEqualString
+      - - operator: isNotEmpty
           left:
             value:
               simple: hello
             iscontext: true
-          right:
-            value:
-              simple: Hello shailan
     continueonerrortype: ""
     view: |-
       {
@@ -149,10 +144,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "4":
     id: "4"
-    taskid: 2d0a1722-dbad-417a-8a56-fd746e840c15
+    taskid: 7593f3f8-606b-47aa-8341-4dd73b2872ad
     type: title
     task:
-      id: 2d0a1722-dbad-417a-8a56-fd746e840c15
+      id: 7593f3f8-606b-47aa-8341-4dd73b2872ad
       version: -1
       name: Test Done
       type: title
@@ -176,10 +171,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "5":
     id: "5"
-    taskid: 96d277ca-89d0-4df3-8bae-13661e06dc44
+    taskid: e3275aab-fc7a-489c-80f4-6106622e707c
     type: regular
     task:
-      id: 96d277ca-89d0-4df3-8bae-13661e06dc44
+      id: e3275aab-fc7a-489c-80f4-6106622e707c
       version: -1
       name: It worked!
       description: Prints text to war room (Markdown supported)
@@ -198,73 +193,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 480,
-          "y": 735
-        }
-      }
-    note: false
-    timertriggers: []
-    ignoreworker: false
-    skipunavailable: false
-    quietmode: 0
-    isoversize: false
-    isautoswitchedtoquietmode: false
-  "6":
-    id: "6"
-    taskid: 933b027a-18e5-4a74-8c6c-82bc99af0963
-    type: regular
-    task:
-      id: 933b027a-18e5-4a74-8c6c-82bc99af0963
-      version: -1
-      name: It did not work!
-      description: Prints an error entry with a given message.
-      scriptName: PrintErrorEntry
-      type: regular
-      iscommand: false
-      brand: ""
-    nexttasks:
-      '#none#':
-      - "7"
-    scriptarguments:
-      message:
-        simple: test failed
-    separatecontext: false
-    continueonerrortype: ""
-    view: |-
-      {
-        "position": {
-          "x": 40,
-          "y": 735
-        }
-      }
-    note: false
-    timertriggers: []
-    ignoreworker: false
-    skipunavailable: false
-    quietmode: 0
-    isoversize: false
-    isautoswitchedtoquietmode: false
-  "7":
-    id: "7"
-    taskid: b9c8fd25-2b34-4af9-a259-82b0cea0f021
-    type: regular
-    task:
-      id: b9c8fd25-2b34-4af9-a259-82b0cea0f021
-      version: -1
-      name: Untitled Task
-      type: regular
-      iscommand: false
-      brand: ""
-    nexttasks:
-      '#none#':
-      - "4"
-    separatecontext: false
-    continueonerrortype: ""
-    view: |-
-      {
-        "position": {
-          "x": 40,
-          "y": 890
+          "x": 250,
+          "y": 830
         }
       }
     note: false
@@ -280,8 +210,8 @@ view: |-
     "paper": {
       "dimensions": {
         "height": 1140,
-        "width": 820,
-        "x": 40,
+        "width": 405,
+        "x": 240,
         "y": 50
       }
     }

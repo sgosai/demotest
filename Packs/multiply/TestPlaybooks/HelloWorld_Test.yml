@@ -1,0 +1,263 @@
+id: HelloWorld_Test
+version: -1
+vcShouldKeepItemLegacyProdMachine: false
+name: HelloWorld_Test
+starttaskid: "0"
+tasks:
+  "0":
+    id: "0"
+    taskid: 1de608e8-baee-42e3-8517-52a737b25098
+    type: start
+    task:
+      id: 1de608e8-baee-42e3-8517-52a737b25098
+      version: -1
+      name: ""
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "1"
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 50
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "1":
+    id: "1"
+    taskid: 02bf0b7f-b1fa-41fa-852c-f61a62b2e26e
+    type: regular
+    task:
+      id: 02bf0b7f-b1fa-41fa-852c-f61a62b2e26e
+      version: -1
+      name: DeleteContext
+      script: DeleteContext
+      type: regular
+      iscommand: true
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "2"
+    scriptarguments:
+      all:
+        simple: "yes"
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 210
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "2":
+    id: "2"
+    taskid: 64b59148-949c-4462-8cf7-f50e976207d3
+    type: regular
+    task:
+      id: 64b59148-949c-4462-8cf7-f50e976207d3
+      version: -1
+      name: Helloworld
+      description: Hello command - prints hello to anyone.
+      script: HelloWorld1|||helloworld-say-hello
+      type: regular
+      iscommand: true
+      brand: HelloWorld1
+    nexttasks:
+      '#none#':
+      - "3"
+    scriptarguments:
+      extend-context:
+        simple: test=
+      name:
+        simple: shailan
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 385
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "3":
+    id: "3"
+    taskid: dbf00921-06d4-40f2-8b99-39c50107f99c
+    type: condition
+    task:
+      id: dbf00921-06d4-40f2-8b99-39c50107f99c
+      version: -1
+      name: Verify Outputs
+      type: condition
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#default#':
+      - "6"
+      "yes":
+      - "5"
+    separatecontext: false
+    conditions:
+    - label: "yes"
+      condition:
+      - - operator: isEqualString
+          left:
+            value:
+              simple: hello
+            iscontext: true
+          right:
+            value:
+              simple: Hello shailan
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 560
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "4":
+    id: "4"
+    taskid: 0cf18eab-1449-4bea-8dc6-f09cc1485442
+    type: title
+    task:
+      id: 0cf18eab-1449-4bea-8dc6-f09cc1485442
+      version: -1
+      name: Test Done
+      type: title
+      iscommand: false
+      brand: ""
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 265,
+          "y": 910
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "5":
+    id: "5"
+    taskid: b2b4b626-6fae-4405-8c9b-ce316c008438
+    type: regular
+    task:
+      id: b2b4b626-6fae-4405-8c9b-ce316c008438
+      version: -1
+      name: It worked!
+      description: Prints text to war room (Markdown supported)
+      scriptName: Print
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "4"
+    scriptarguments:
+      value:
+        simple: It worked!
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 480,
+          "y": 735
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+  "6":
+    id: "6"
+    taskid: d54239a2-43b2-400e-8dd3-67d86995dcab
+    type: regular
+    task:
+      id: d54239a2-43b2-400e-8dd3-67d86995dcab
+      version: -1
+      name: It did not work!
+      description: Prints text to war room (Markdown supported)
+      scriptName: Print
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "4"
+    scriptarguments:
+      value:
+        simple: It did not work!
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 735
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 920,
+        "width": 810,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }
+inputs: []
+outputs: []
+sourceplaybookid: multiply_Test
+dirtyInputs: true
+fromversion: 6.1.0

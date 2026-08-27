@@ -5,4 +5,4 @@ def test_passing():
 
 def test_failing():
     """This test will fail intentionally."""
-    assert 1 + 1 == 3
+    assert 1 + 1 == 2

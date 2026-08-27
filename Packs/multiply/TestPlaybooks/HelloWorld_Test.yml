@@ -6,10 +6,10 @@ starttaskid: "0"
 tasks:
   "0":
     id: "0"
-    taskid: a871ff6c-9c93-4d3a-800a-96d10f3a8ee9
+    taskid: 16678589-7030-4738-8390-0b7dd84c2d74
     type: start
     task:
-      id: a871ff6c-9c93-4d3a-800a-96d10f3a8ee9
+      id: 16678589-7030-4738-8390-0b7dd84c2d74
       version: -1
       name: ""
       iscommand: false
@@ -35,10 +35,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "1":
     id: "1"
-    taskid: fbc0b15d-a03c-4b64-84ad-5bcfd761d9ed
+    taskid: e3249b63-41f0-4099-886f-ac634c9fc7c6
     type: regular
     task:
-      id: fbc0b15d-a03c-4b64-84ad-5bcfd761d9ed
+      id: e3249b63-41f0-4099-886f-ac634c9fc7c6
       version: -1
       name: DeleteContext
       script: DeleteContext
@@ -69,10 +69,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "2":
     id: "2"
-    taskid: 015bf1cb-ad67-4e50-9f3f-e9718156e36e
+    taskid: 502c4619-ad80-45b9-89bd-bb8334511625
     type: regular
     task:
-      id: 015bf1cb-ad67-4e50-9f3f-e9718156e36e
+      id: 502c4619-ad80-45b9-89bd-bb8334511625
       version: -1
       name: Helloworld
       description: Hello command - prints hello to anyone.
@@ -106,10 +106,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "3":
     id: "3"
-    taskid: 6e547088-b0ea-42c8-b340-db06796c0c6d
+    taskid: 6886b4e8-7838-4bf3-8246-27bc1f2fbbe5
     type: condition
     task:
-      id: 6e547088-b0ea-42c8-b340-db06796c0c6d
+      id: 6886b4e8-7838-4bf3-8246-27bc1f2fbbe5
       version: -1
       name: Verify Outputs
       type: condition
@@ -149,10 +149,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "4":
     id: "4"
-    taskid: 6196aec5-a0d3-4369-88f6-2c81bd4a1d0b
+    taskid: 2d0a1722-dbad-417a-8a56-fd746e840c15
     type: title
     task:
-      id: 6196aec5-a0d3-4369-88f6-2c81bd4a1d0b
+      id: 2d0a1722-dbad-417a-8a56-fd746e840c15
       version: -1
       name: Test Done
       type: title
@@ -163,8 +163,8 @@ tasks:
     view: |-
       {
         "position": {
-          "x": 265,
-          "y": 910
+          "x": 240,
+          "y": 1130
         }
       }
     note: false
@@ -176,10 +176,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "5":
     id: "5"
-    taskid: a9ac1ab3-588b-4384-8a72-d536fd510a55
+    taskid: 96d277ca-89d0-4df3-8bae-13661e06dc44
     type: regular
     task:
-      id: a9ac1ab3-588b-4384-8a72-d536fd510a55
+      id: 96d277ca-89d0-4df3-8bae-13661e06dc44
       version: -1
       name: It worked!
       description: Prints text to war room (Markdown supported)
@@ -211,10 +211,10 @@ tasks:
     isautoswitchedtoquietmode: false
   "6":
     id: "6"
-    taskid: 1df957a6-c629-47ab-b207-4050d39274cb
+    taskid: 933b027a-18e5-4a74-8c6c-82bc99af0963
     type: regular
     task:
-      id: 1df957a6-c629-47ab-b207-4050d39274cb
+      id: 933b027a-18e5-4a74-8c6c-82bc99af0963
       version: -1
       name: It did not work!
       description: Prints an error entry with a given message.
@@ -224,7 +224,7 @@ tasks:
       brand: ""
     nexttasks:
       '#none#':
-      - "4"
+      - "7"
     scriptarguments:
       message:
         simple: test failed
@@ -244,12 +244,42 @@ tasks:
     quietmode: 0
     isoversize: false
     isautoswitchedtoquietmode: false
+  "7":
+    id: "7"
+    taskid: b9c8fd25-2b34-4af9-a259-82b0cea0f021
+    type: regular
+    task:
+      id: b9c8fd25-2b34-4af9-a259-82b0cea0f021
+      version: -1
+      name: Untitled Task
+      type: regular
+      iscommand: false
+      brand: ""
+    nexttasks:
+      '#none#':
+      - "4"
+    separatecontext: false
+    continueonerrortype: ""
+    view: |-
+      {
+        "position": {
+          "x": 40,
+          "y": 890
+        }
+      }
+    note: false
+    timertriggers: []
+    ignoreworker: false
+    skipunavailable: false
+    quietmode: 0
+    isoversize: false
+    isautoswitchedtoquietmode: false
 view: |-
   {
     "linkLabelsPosition": {},
     "paper": {
       "dimensions": {
-        "height": 920,
+        "height": 1140,
         "width": 820,
         "x": 40,
         "y": 50
